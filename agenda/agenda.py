@@ -20,9 +20,12 @@ def index():
 
 @app.route('/citas')
 def ver_citas():
-    cursor.execute("SELECT * from citas")
+    cursor.execute("SELECT usu_nombre, con_nombre, con_apellido, con_telefono, cit_lugar, cit_fecha, cit_hora, cit_descripcion " +
+                    "FROM usuarios as usu " + 
+                    "LEFT JOIN contactos as con on (usu.usu_id = con.usu_id) " +
+                    "LEFT JOIN citas as cit on (con.con_id = cit.con_id)")
     data = cursor.fetchall()
-    return render_template('citas.html', citas = data)
+    return render_template('citas.html', citas = data )
 
 @app.route('/contactos')
 def ver_contactos():
