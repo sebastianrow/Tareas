@@ -8,3 +8,8 @@ Facultad de Ingeniería
 <br>
 Ingeniería de Sistemas 
 <br>
+<br>
+Integrantes: 
+Juan Sebastián Gonzalez Forero  
+David Esteban Moreno Lara
+Juan Sebastián Alvarado Ávila 
