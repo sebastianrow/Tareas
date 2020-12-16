@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Citas</title>
+        <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='c.css')}}">
+    </head>
+    <body>      
+        <ul class="menu"> 
+            <center>
+            <hr>
+            <li><a href="{{url_for('ver_contactos')}}">Contactos</a><br></li>
+            <li><a href="{{url_for('ver_usuarios')}}">Usuarios</a><br></li>
+            <li><a href="{{url_for('ver_citas')}}">Citas</a><br></li>
+            <hr>
+        </center>
+        </ul>
+        <hr>
+        <center><h1>Citas</h1>
+            <hr>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            
+        <table border ='4'>
+           <tr>
+                <th>ID Cita</th>
+                <th>ID Contacto</th>
+                <th>Lugar</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Descripción</th>
+                <th colspan = "3">  Edición </th>
+           </tr>
+           {% for u in citas%}
+           <tr>
+                <td>{{ u[0] }}</td>
+                <td>{{ u[1] }}</td>
+                <td>{{ u[2] }}</td>
+                <td>{{ u[3] }}</td>
+                <td>{{ u[4] }}</td>
+                <td>{{ u[5] }}</td>
+                
+                <td><button>Actualizar</button></td>
+                <td><button>Agregar</button></td>
+                <td><button>Eliminar</button></td>
+            </tr>
+        {% endfor %}
+        
+    </center>
+        </table>
+        <p></p>
+        <button>Agregar citas</button>
+        <br>
+        <br>
+        <br> 
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <a href="{{url_for('index')}}"><img src="{{ url_for('static', filename='imagenes/home2.jpg')}}" width=50pnx></a>
+    </body>  
+</html>
