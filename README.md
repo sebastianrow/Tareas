@@ -10,6 +10,9 @@ Ingeniería de Sistemas
 <br>
 <br>
 Integrantes: 
+<br>
 Juan Sebastián Gonzalez Forero  
+<br>
 David Esteban Moreno Lara
+<br>
 Juan Sebastián Alvarado Ávila 
